@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="8dp">
+            
+            <Button
+                android:id="@+id/menuLanguageButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="1. 언어 설정"
+                android:layout_marginBottom="4dp"/>
+            
+            <Button
+                android:id="@+id/menuSubTitleButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="2. 외국어 자막"
+                android:layout_marginBottom="4dp"/>
+
+            <Button
+                android:id="@+id/menuPlayModeButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="3. 진행 방식"
+                android:layout_marginBottom="4dp"/>
+
+            <Button
+                android:id="@+id/menuDelayButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="4. 다음 카드 대기"
+                android:layout_marginBottom="4dp"/>
+
+            <Button
+                android:id="@+id/menuKoSubTitleButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="5. 한국어 자막"
+                android:layout_marginBottom="4dp"/>
+
+            <Button
+                android:id="@+id/menuAudioButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="6. 오디오 설정"
+                android:layout_marginBottom="4dp"/>
+            
+            <Button
+                android:id="@+id/menuCardCountButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="7. 카드 수량 선택"
+                android:layout_marginBottom="4dp"/>
+
+            <Button
+                android:id="@+id/menuResetButton"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="8. 초기화"/>
+
+            </LinearLayout>
+        
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6.5"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:id="@+id/languageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="학습할 언어 선택"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+                
+                <Button
+                    android:id="@+id/englishButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="영어"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/frenchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="프랑스어"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/japaneseButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="일본어"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/germanButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="독일어"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/subTitleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="외국어 자막 표시"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16sp"/>
+
+                <Button
+                    android:id="@+id/subTitleOnButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="켜기"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/subTitleOffButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="끄기" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/playModeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="카드 넘김 방식"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp" />
+
+                <Button
+                    android:id="@+id/autoButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="자동 (시간 조정 가능)"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/manualButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="수동 (터치하여 넘김)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/delayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오디오 종료 후 다음 카드 대기 시간"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+
+                <Button
+                    android:id="@+id/delayButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="0.1초 뒤 바로"
+                    android:layout_marginBottom="8dp" />
+                
+                <Button
+                    android:id="@+id/delay2Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="0.2초 뒤 바로"
+                    android:layout_marginBottom="8dp" />
+                
+                <Button
+                    android:id="@+id/delay5Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="0.5초 뒤 바로"
+                    android:layout_marginBottom="8dp"/>
+                
+                <Button
+                    android:id="@+id/delay10Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="1.0초 뒤 바로"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/koSubtitleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="한국어 뜻/자막 표시"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+                
+                <Button
+                    android:id="@+id/koSubTitleOnButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="켜기"
+                    android:layout_marginBottom="8dp"/>
+                
+                <Button
+                    android:id="@+id/koSubTitleOffButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="끄기" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/audioLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오디오 출력 설정"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+                
+                <Button
+                    android:id="@+id/audioToggleButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="오디오 켜기"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cardCountLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="학습할 카드 수량"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+                
+                <Button
+                    android:id="@+id/count10Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="10개"
+                    android:layout_marginBottom="8dp"/>
+                
+                <Button
+                    android:id="@+id/count30Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="30개"
+                    android:layout_marginBottom="8dp"/>
+                
+                <Button
+                    android:id="@+id/count50Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="50개"
+                    android:layout_marginBottom="8dp"/>
+                
+                <Button
+                    android:id="@+id/count100Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="100개"
+                    android:layout_marginBottom="8dp"/>
+                
+                <Button
+                    android:id="@+id/countCustomButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="사용자 설정"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/resetLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="설정 초기화"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"/>
+                
+                <Button
+                    android:id="@+id/resetActionButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="설정 초기화"
+                    android:background="#FF9800"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="#EAEAEA">
+
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:text="적용"
+            android:textSize="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#4CAF50"/>
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:text="취소"
+            android:textSize="16dp"
+            android:backgroundTint="#F44336"/>
+    </LinearLayout>
+</LinearLayout>
